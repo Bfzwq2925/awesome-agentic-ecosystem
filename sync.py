@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
-Awesome Agentic Ecosystem - Grand Master Index & Multi-Directory Generator
-Automated deep discovery, strict quality filter, multi-category directory builder,
-and master index generator for AI Agents, MCP Servers, Agent Skills, Plugins, and Frameworks.
+Awesome Agentic Ecosystem - Root Categories & Full Deep-Dive Index Generator
+Automated deep discovery, strict anti-junk filter, root-level category directories,
+and master deep-dive index generator for AI Agents, MCP Servers, Agent Skills, Plugins, and Frameworks.
 
-Maintained by: tech.anupam
+Maintained by: tech-anupam
 Support / Donate: https://anupambuilds.store/donate
 Store: https://anupambuilds.store
+Repository: https://github.com/tech-anupam/awesome-agentic-ecosystem
 """
 
 import argparse
@@ -14,6 +15,7 @@ import datetime
 import json
 import os
 import random
+import shutil
 import sys
 import time
 from typing import Dict, List, Optional, Set, Tuple
@@ -30,7 +32,6 @@ if sys.stdout.encoding != "utf-8":
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(BASE_DIR, "tools.json")
 README_FILE = os.path.join(BASE_DIR, "README.md")
-CATEGORIES_DIR = os.path.join(BASE_DIR, "categories")
 GITHUB_API_URL = "https://api.github.com"
 
 # Quality thresholds & strict anti-junk gate
@@ -223,7 +224,6 @@ def get_github_headers() -> Dict[str, str]:
 
 
 def fetch_search_results(query: str, sort: str, page: int, per_page: int, headers: Dict[str, str]) -> Tuple[List[Dict], bool]:
-    """Execute GitHub search query with pagination and rate limit check."""
     url = f"{GITHUB_API_URL}/search/repositories?q={urllib.parse.quote(query)}&sort={sort}&order=desc&page={page}&per_page={per_page}"
     try:
         resp = requests.get(url, headers=headers, timeout=12)
@@ -241,10 +241,6 @@ def fetch_search_results(query: str, sort: str, page: int, per_page: int, header
 
 
 def is_quality_repo(repo: Dict, min_stars: int = DEFAULT_MIN_STARS) -> bool:
-    """
-    Strict Quality Gate:
-    Filters out archived projects, spam, low-effort forks, dead repos, or empty toys.
-    """
     if repo.get("archived", False):
         return False
     if repo.get("fork", False) and repo.get("stargazers_count", 0) < 500:
@@ -277,7 +273,6 @@ def is_quality_repo(repo: Dict, min_stars: int = DEFAULT_MIN_STARS) -> bool:
 
 
 def categorize_repo(repo: Dict, cat_hint: Optional[str] = None) -> str:
-    """Intelligently score and classify repository into one of the 10 canonical categories."""
     topics = [t.lower() for t in repo.get("topics", [])]
     name = (repo.get("name") or "").lower()
     description = (repo.get("description") or "").lower()
@@ -320,7 +315,6 @@ def save_tools(tools: List[Dict]):
 
 
 def update_and_discover(min_stars: int, limit: int, pages: int = 2, clean: bool = False) -> List[Dict]:
-    """Execute dynamic discovery across rotated queries with strict deduplication."""
     existing_tools = [] if clean else load_tools()
     tools_by_name: Dict[str, Dict] = {t["full_name"].strip().lower(): t for t in existing_tools}
     headers = get_github_headers()
@@ -383,7 +377,6 @@ def update_and_discover(min_stars: int, limit: int, pages: int = 2, clean: bool 
                     tools_by_name[fn_key]["forks"] = forks
                     tools_by_name[fn_key]["description"] = desc
                     tools_by_name[fn_key]["last_updated"] = datetime.date.today().isoformat()
-                    # Re-verify category to match updated 10-category taxonomy
                     tools_by_name[fn_key]["category"] = categorize_repo(item, cat_hint=cat_hint)
                     updated_records += 1
                 else:
@@ -421,12 +414,14 @@ def format_star_count(stars: int) -> str:
     return str(stars)
 
 
-def generate_category_readmes(tools: List[Dict], by_cat: Dict[str, List[Dict]], last_sync: str):
-    """Generate individual detailed README.md files in each category directory."""
-    os.makedirs(CATEGORIES_DIR, exist_ok=True)
+def generate_root_category_readmes(tools: List[Dict], by_cat: Dict[str, List[Dict]], last_sync: str):
+    """Generate individual detailed README.md files directly in root category folders."""
+    old_categories_dir = os.path.join(BASE_DIR, "categories")
+    if os.path.exists(old_categories_dir):
+        shutil.rmtree(old_categories_dir, ignore_errors=True)
 
     for cat_key, cat_meta in CATEGORIES.items():
-        cat_folder = os.path.join(CATEGORIES_DIR, cat_meta["slug"])
+        cat_folder = os.path.join(BASE_DIR, cat_meta["slug"])
         os.makedirs(cat_folder, exist_ok=True)
         cat_file = os.path.join(cat_folder, "README.md")
 
@@ -438,11 +433,11 @@ def generate_category_readmes(tools: List[Dict], by_cat: Dict[str, List[Dict]], 
         lines.append("")
         lines.append(f"> {cat_meta['description']}")
         lines.append("")
-        lines.append(f"[← Back to Grand Master Index](../../README.md) • [⭐ Star Repository]({REPO_URL})")
+        lines.append(f"[← Back to Main Repository](../README.md) • [⭐ Star Repository]({REPO_URL})")
         lines.append("")
-        lines.append(f"[![Tools in Category](https://img.shields.io/badge/Tools-{len(cat_tools)}-blue.svg?style=for-the-badge)](./) ")
-        lines.append(f"[![Category Stars](https://img.shields.io/badge/Category%20Stars-{format_star_count(cat_stars)}+-yellow.svg?style=for-the-badge)]({REPO_URL}) ")
-        lines.append(f"[![Updated](https://img.shields.io/badge/Updated-{last_sync}-orange.svg?style=for-the-badge)]({REPO_URL})")
+        lines.append(f"[![Tools in Category](https://img.shields.io/static/v1?label=Tools&message={len(cat_tools)}&color=blue&style=for-the-badge)](./) ")
+        lines.append(f"[![Category Stars](https://img.shields.io/static/v1?label=Category%20Stars&message={format_star_count(cat_stars)}+&color=yellow&style=for-the-badge)]({REPO_URL}) ")
+        lines.append(f"[![Updated](https://img.shields.io/static/v1?label=Updated&message={last_sync}&color=orange&style=for-the-badge)]({REPO_URL})")
         lines.append("")
         lines.append("---")
         lines.append("")
@@ -462,17 +457,16 @@ def generate_category_readmes(tools: List[Dict], by_cat: Dict[str, List[Dict]], 
         lines.append("")
         lines.append("---")
         lines.append("")
-        lines.append(f"[← Back to Grand Master Index](../../README.md) • [💖 Support & Donate]({DONATE_URL})")
+        lines.append(f"[← Back to Main Repository](../README.md) • [💖 Support & Donate]({DONATE_URL})")
 
         with open(cat_file, "w", encoding="utf-8") as f:
             f.write("\n".join(lines) + "\n")
 
-    print(f"[*] Successfully generated {len(CATEGORIES)} category directory READMEs in {CATEGORIES_DIR}.", flush=True)
+    print(f"[*] Successfully generated {len(CATEGORIES)} root category directories.", flush=True)
 
 
 def generate_master_readme(tools: List[Dict]):
-    """Build Grand Master Index README linking directly to category directories and trending tools."""
-    # Re-verify and update any category mapping changes
+    """Build Grand Master Index README linking directly to root category directories and displaying full deep-dive categorized tables."""
     for t in tools:
         if t.get("category") not in CATEGORIES:
             t["category"] = categorize_repo(t)
@@ -493,42 +487,57 @@ def generate_master_readme(tools: List[Dict]):
     for cat in by_cat:
         by_cat[cat].sort(key=lambda x: x.get("stars", 0), reverse=True)
 
-    # First, generate all category subfolders & sub-readmes
-    generate_category_readmes(tools, by_cat, last_sync)
+    # First, generate all root category folders & sub-readmes
+    generate_root_category_readmes(tools, by_cat, last_sync)
 
     lines = []
 
     # Title & Hero
     lines.append("# ⚡ Awesome Agentic Ecosystem")
     lines.append("")
-    lines.append("> A curated, fully automated grand master index of high-impact **AI Agents**, **Model Context Protocol (MCP) Servers**, **AI IDEs & Editors**, **CLI Agent Tools**, **Agent Skills**, and **Multi-Agent Frameworks**. Only useful, battle-tested tools — zero junk. 🤖🔌💻")
+    lines.append("> A curated, fully automated grand master index of high-impact **AI Agents**, **Model Context Protocol (MCP) Servers**, **AI IDEs & Editors**, **CLI Agent Tools**, **Agent Skills**, and **Multi-Agent Frameworks**. Only battle-tested, high-utility tools — zero junk. 🤖🔌💻")
     lines.append("")
 
-    # Badges Row 1: Metrics
-    lines.append(f"[![Total Tools](https://img.shields.io/badge/Total%20Tools-{total_tools}-blue.svg?style=for-the-badge&logo=github)](./tools.json) ")
-    lines.append(f"[![Total Stars Tracked](https://img.shields.io/badge/Total%20Stars-{format_star_count(total_stars)}+-yellow.svg?style=for-the-badge&logo=apachespark)]({REPO_URL}) ")
-    lines.append(f"[![Auto Sync](https://img.shields.io/badge/Auto%20Sync-Daily%20Cron-brightgreen.svg?style=for-the-badge&logo=githubactions)](./.github/workflows/update.yml) ")
-    lines.append(f"[![Last Updated](https://img.shields.io/badge/Updated-{last_sync}-orange.svg?style=for-the-badge)]({REPO_URL}) ")
-    lines.append(f"[![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg?style=for-the-badge)](./LICENSE)")
+    # Badges Row 1: Metrics (Using bulletproof static/v1 syntax that never 404s)
+    lines.append(f"[![Total Tools](https://img.shields.io/static/v1?label=Total%20Tools&message={total_tools}&color=blue&style=for-the-badge&logo=github)](./tools.json) ")
+    lines.append(f"[![Total Stars Tracked](https://img.shields.io/static/v1?label=Total%20Stars&message={format_star_count(total_stars)}+&color=yellow&style=for-the-badge&logo=apachespark)]({REPO_URL}) ")
+    lines.append(f"[![Auto Sync](https://img.shields.io/static/v1?label=Auto%20Sync&message=Daily%20Cron&color=brightgreen&style=for-the-badge&logo=githubactions)](./.github/workflows/update.yml) ")
+    lines.append(f"[![Last Updated](https://img.shields.io/static/v1?label=Updated&message={last_sync}&color=orange&style=for-the-badge)]({REPO_URL}) ")
+    lines.append(f"[![License: MIT](https://img.shields.io/static/v1?label=License&message=MIT&color=purple&style=for-the-badge)](./LICENSE)")
     lines.append("")
 
     # Badges Row 2: Author & Donate
-    lines.append(f"[![Maintainer](https://img.shields.io/badge/Maintainer-{AUTHOR_NAME}-00C7B7.svg?style=for-the-badge&logo=github)]({AUTHOR_PROFILE}) ")
-    lines.append(f"[![Support & Donate](https://img.shields.io/badge/Support-Donate%20Here-FF5E5B.svg?style=for-the-badge&logo=kofi&logoColor=white)]({DONATE_URL}) ")
-    lines.append(f"[![Store](https://img.shields.io/badge/Store-anupambuilds.store-7952B3.svg?style=for-the-badge&logo=shopify&logoColor=white)]({STORE_URL})")
+    lines.append(f"[![Maintainer](https://img.shields.io/static/v1?label=Maintainer&message={AUTHOR_NAME}&color=00C7B7&style=for-the-badge&logo=github)]({AUTHOR_PROFILE}) ")
+    lines.append(f"[![Support & Donate](https://img.shields.io/static/v1?label=Support&message=Donate%20Here&color=FF5E5B&style=for-the-badge&logo=kofi&logoColor=white)]({DONATE_URL}) ")
+    lines.append(f"[![Store](https://img.shields.io/static/v1?label=Store&message=anupambuilds.store&color=7952B3&style=for-the-badge&logo=shopify&logoColor=white)]({STORE_URL})")
     lines.append("")
     lines.append("---")
     lines.append("")
 
-    # Interactive Category Hub / Directory Index Cards
-    lines.append("## 📂 Explore by Category Directory")
+    # Root Category Directories Navigation Table
+    lines.append("## 📂 Category Directories (Browse by Folder)")
     lines.append("")
-    lines.append("| Category Directory | Folder Link | Curated Tools | Focus Area |")
+    lines.append("| Category Directory | Folder Link | Tools Count | Focus Area |")
     lines.append("| :--- | :--- | :---: | :--- |")
     for cat_key, cat_meta in CATEGORIES.items():
         count = len(by_cat.get(cat_key, []))
-        folder_link = f"[`categories/{cat_meta['slug']}/`](./categories/{cat_meta['slug']}/)"
+        folder_link = f"[`{cat_meta['slug']}/`](./{cat_meta['slug']}/)"
         lines.append(f"| {cat_meta['icon']} **{cat_meta['title']}** | {folder_link} | `{count} tools` | {cat_meta['description']} |")
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+
+    # Table of Contents
+    lines.append("## 📑 Quick Navigation")
+    lines.append("- [🔥 Top 10 Starred & Trending Tools](#-top-10-starred--trending-tools)")
+    for cat_key, cat_meta in CATEGORIES.items():
+        count = len(by_cat.get(cat_key, []))
+        lines.append(f"- [{cat_meta['icon']} {cat_meta['title']} ({count})](#-{cat_meta['slug']})")
+    lines.append("- [🆕 Recently Discovered](#-recently-discovered)")
+    lines.append("- [🛡️ Strict Quality & Anti-Junk Gate](#️-strict-quality--anti-junk-gate)")
+    lines.append("- [🛠️ How It Works & Automation](#️-how-it-works--automation)")
+    lines.append("- [💖 Support & Donate](#-support--donate)")
+    lines.append("- [🤝 Contributing](#-contributing)")
     lines.append("")
     lines.append("---")
     lines.append("")
@@ -536,30 +545,54 @@ def generate_master_readme(tools: List[Dict]):
     # Top 10 Trending
     lines.append("## 🔥 Top 10 Starred & Trending Tools")
     lines.append("")
-    lines.append("| Rank | Tool | Category Directory | Stars | Language | Description |")
+    lines.append("| Rank | Tool | Category Folder | Stars | Language | Description |")
     lines.append("| :---: | :--- | :--- | :---: | :---: | :--- |")
     for idx, t in enumerate(trending_top, 1):
         cat_meta = CATEGORIES.get(t.get("category", ""), {})
         cat_slug = cat_meta.get("slug", "frameworks-orchestration")
         cat_icon = cat_meta.get("icon", "📦")
-        cat_label = f"[{cat_icon} {cat_meta.get('title', 'Tools')}](./categories/{cat_slug}/)"
+        cat_label = f"[{cat_icon} {cat_meta.get('title', 'Tools')}](./{cat_slug}/)"
         stars_formatted = format_star_count(t.get("stars", 0))
         lines.append(f"| **#{idx}** | [**`{t['name']}`**]({t['url']}) | {cat_label} | ⭐ `{stars_formatted}` | `{t.get('language', 'Multi')}` | {t['description']} |")
     lines.append("")
     lines.append("---")
     lines.append("")
 
+    # Full Categorized Sections directly in Root README (Deep Dive Encyclopedia)
+    for cat_key, cat_meta in CATEGORIES.items():
+        cat_tools = by_cat.get(cat_key, [])
+        cat_slug = cat_meta["slug"]
+        lines.append(f"## <a id=\"-{cat_slug}\"></a>{cat_meta['icon']} {cat_meta['title']}")
+        lines.append(f"> *{cat_meta['description']}* • [📁 Browse `{cat_slug}/` Directory](./{cat_slug}/)")
+        lines.append("")
+
+        if not cat_tools:
+            lines.append("*No tools currently catalogued in this category.*")
+            lines.append("")
+            continue
+
+        lines.append("| Tool | Description | Stars | Language | Direct Link |")
+        lines.append("| :--- | :--- | :---: | :---: | :---: |")
+        for t in cat_tools:
+            badge = f"[![Stars](https://img.shields.io/github/stars/{t['full_name']}?style=flat&label=⭐)]({t['url']})"
+            lang = t.get("language") or "Multi"
+            lines.append(f"| [**`{t['name']}`**]({t['url']}) | {t['description']} | {badge} | `{lang}` | [Explore ↗]({t['url']}) |")
+        lines.append("")
+
+    lines.append("---")
+    lines.append("")
+
     # Recently Added
-    recent_tools = sorted(tools, key=lambda x: x.get("added_at", "2000-01-01"), reverse=True)[:6]
+    recent_tools = sorted(tools, key=lambda x: x.get("added_at", "2000-01-01"), reverse=True)[:8]
     lines.append("## 🆕 Recently Discovered")
     lines.append("")
-    lines.append("| Tool | Discovered Date | Stars | Category Directory |")
+    lines.append("| Tool | Discovered Date | Stars | Category Folder |")
     lines.append("| :--- | :---: | :---: | :--- |")
     for t in recent_tools:
         cat_meta = CATEGORIES.get(t.get("category", ""), {})
         cat_slug = cat_meta.get("slug", "frameworks-orchestration")
         cat_icon = cat_meta.get("icon", "📦")
-        cat_link = f"[{cat_icon} {cat_meta.get('title', 'Category')}](./categories/{cat_slug}/)"
+        cat_link = f"[{cat_icon} {cat_meta.get('title', 'Category')}](./{cat_slug}/)"
         lines.append(f"| [**`{t['name']}`**]({t['url']}) | `{t.get('added_at', 'N/A')}` | ⭐ `{format_star_count(t.get('stars', 0))}` | {cat_link} |")
     lines.append("")
     lines.append("---")
@@ -583,9 +616,9 @@ def generate_master_readme(tools: List[Dict]):
     lines.append("")
     lines.append("This repository updates **automatically every day at 00:00 UTC** via GitHub Actions.")
     lines.append("")
-    lines.append("1. **Deep Discovery**: Rotates queries across GitHub API topics (`mcp-server`, `ai-editor`, `cli-agent`, `coding-agent`, `agent-skills`, `browser-agent`, etc.).")
+    lines.append("1. **Deep Discovery**: Rotates queries across GitHub API topics (`ai-ide`, `cli-agent`, `mcp-server`, `coding-agent`, `agent-skills`, `browser-agent`, etc.).")
     lines.append("2. **Quality Gate & Filter**: Evaluates metadata, stars, push activity, and description quality.")
-    lines.append("3. **Category Directory Generation**: Automatically updates both `tools.json` and 10 per-category directory READMEs in [`categories/`](./categories/).")
+    lines.append("3. **Multi-Folder Generation**: Automatically updates both `tools.json`, root category directories, and this `README.md`.")
     lines.append("4. **Auto-Commit**: Changes are cleanly pushed to GitHub daily.")
     lines.append("")
     lines.append("---")
@@ -634,7 +667,7 @@ def main():
 
     if args.render_only:
         tools = load_tools()
-        print(f"[*] Rendering Master Index and 10 Category Folders from {len(tools)} tools...", flush=True)
+        print(f"[*] Rendering Master Index and Root Category Folders from {len(tools)} tools...", flush=True)
         generate_master_readme(tools)
     else:
         tools = update_and_discover(

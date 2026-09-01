@@ -2,11 +2,11 @@
 
 > Next-generation AI-first code editors, IDE forks, and intelligent developer workbenches (Cursor, Windsurf, Trae, Void, PearAI, Zed AI).
 
-[← Back to Grand Master Index](../../README.md) • [⭐ Star Repository](https://github.com/tech-anupam/awesome-agentic-ecosystem)
+[← Back to Main Repository](../README.md) • [⭐ Star Repository](https://github.com/tech-anupam/awesome-agentic-ecosystem)
 
-[![Tools in Category](https://img.shields.io/badge/Tools-19-blue.svg?style=for-the-badge)](./) 
-[![Category Stars](https://img.shields.io/badge/Category%20Stars-178.4k+-yellow.svg?style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem) 
-[![Updated](https://img.shields.io/badge/Updated-2026-09-01-orange.svg?style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem)
+[![Tools in Category](https://img.shields.io/static/v1?label=Tools&message=19&color=blue&style=for-the-badge)](./) 
+[![Category Stars](https://img.shields.io/static/v1?label=Category%20Stars&message=178.4k+&color=yellow&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem) 
+[![Updated](https://img.shields.io/static/v1?label=Updated&message=2026-09-01&color=orange&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem)
 
 ---
 
@@ -36,4 +36,4 @@
 
 ---
 
-[← Back to Grand Master Index](../../README.md) • [💖 Support & Donate](https://anupambuilds.store/donate)
+[← Back to Main Repository](../README.md) • [💖 Support & Donate](https://anupambuilds.store/donate)

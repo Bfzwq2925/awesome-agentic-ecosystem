@@ -2,11 +2,11 @@
 
 > Function calling suites, tool integrations, external API bridges, and executable skillsets (Composio, Toolhouse, ToolJet).
 
-[← Back to Grand Master Index](../../README.md) • [⭐ Star Repository](https://github.com/tech-anupam/awesome-agentic-ecosystem)
+[← Back to Main Repository](../README.md) • [⭐ Star Repository](https://github.com/tech-anupam/awesome-agentic-ecosystem)
 
-[![Tools in Category](https://img.shields.io/badge/Tools-36-blue.svg?style=for-the-badge)](./) 
-[![Category Stars](https://img.shields.io/badge/Category%20Stars-289.9k+-yellow.svg?style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem) 
-[![Updated](https://img.shields.io/badge/Updated-2026-09-01-orange.svg?style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem)
+[![Tools in Category](https://img.shields.io/static/v1?label=Tools&message=36&color=blue&style=for-the-badge)](./) 
+[![Category Stars](https://img.shields.io/static/v1?label=Category%20Stars&message=289.9k+&color=yellow&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem) 
+[![Updated](https://img.shields.io/static/v1?label=Updated&message=2026-09-01&color=orange&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem)
 
 ---
 
@@ -53,4 +53,4 @@
 
 ---
 
-[← Back to Grand Master Index](../../README.md) • [💖 Support & Donate](https://anupambuilds.store/donate)
+[← Back to Main Repository](../README.md) • [💖 Support & Donate](https://anupambuilds.store/donate)
