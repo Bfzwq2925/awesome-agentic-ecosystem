@@ -2,7 +2,7 @@
 
 > A curated, fully automated grand master index of high-impact **AI Agents**, **Model Context Protocol (MCP) Servers**, **AI IDEs & Editors**, **CLI Agent Tools**, **Agent Skills**, and **Multi-Agent Frameworks**. Only battle-tested, high-utility tools — zero junk. 🤖🔌💻
 
-[![Total Tools](https://img.shields.io/static/v1?label=Total%20Tools&message=277&color=blue&style=for-the-badge&logo=github)](./tools.json) 
+[![Total Tools](https://img.shields.io/static/v1?label=Total%20Tools&message=277&color=blue&style=for-the-badge&logo=github)](./scripts/tools.json) 
 [![Total Stars Tracked](https://img.shields.io/static/v1?label=Total%20Stars&message=7214.8k+&color=yellow&style=for-the-badge&logo=apachespark)](https://github.com/tech-anupam/awesome-agentic-ecosystem) 
 [![Auto Sync](https://img.shields.io/static/v1?label=Auto%20Sync&message=Daily%20Cron&color=brightgreen&style=for-the-badge&logo=githubactions)](./.github/workflows/update.yml) 
 [![Last Updated](https://img.shields.io/static/v1?label=Updated&message=2026-09-01&color=orange&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem) 
@@ -439,7 +439,7 @@ This repository updates **automatically every day at 00:00 UTC** via GitHub Acti
 
 1. **Deep Discovery**: Rotates queries across GitHub API topics (`ai-ide`, `cli-agent`, `mcp-server`, `coding-agent`, `agent-skills`, `browser-agent`, etc.).
 2. **Quality Gate & Filter**: Evaluates metadata, stars, push activity, and description quality.
-3. **Multi-Folder Generation**: Automatically updates both `tools.json`, root category directories, and this `README.md`.
+3. **Multi-Folder Generation**: Automatically updates both `scripts/tools.json`, root category directories, and this `README.md`.
 4. **Auto-Commit**: Changes are cleanly pushed to GitHub daily.
 
 ---
@@ -459,8 +459,8 @@ If this collection helps you find top-tier tools for your AI stack, please consi
 Have you built or discovered an awesome AI Agent, MCP Server, or Tool?
 
 1. Fork this repository.
-2. Add your tool entry directly to `tools.json` with the proper category.
-3. Run `python sync.py --render-only` to regenerate all category directories and the master index.
+2. Add your tool entry directly to `scripts/tools.json` with the proper category.
+3. Run `python scripts/sync.py --render-only` to regenerate all category directories and the master index.
 4. Submit a Pull Request!
 
 ---

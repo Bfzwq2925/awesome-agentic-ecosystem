@@ -29,19 +29,19 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r scripts/requirements.txt
 
       - name: Run Deep Discovery & Quality Sync
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python sync.py --limit 15 --min-stars 200
+          python scripts/sync.py --limit 15 --min-stars 200
 
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(ecosystem): auto-sync root category directories & README [skip ci]"
-          file_pattern: "tools.json README.md */README.md"
+          file_pattern: "scripts/tools.json README.md */README.md"
           commit_user_name: "github-actions[bot]"
           commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"
           commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"

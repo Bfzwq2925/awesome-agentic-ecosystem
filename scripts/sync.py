@@ -29,8 +29,9 @@ if sys.stdout.encoding != "utf-8":
     except Exception:
         pass
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_FILE = os.path.join(BASE_DIR, "tools.json")
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(SCRIPT_DIR)  # Repository root
+DATA_FILE = os.path.join(SCRIPT_DIR, "tools.json")
 README_FILE = os.path.join(BASE_DIR, "README.md")
 GITHUB_API_URL = "https://api.github.com"
 
@@ -499,7 +500,7 @@ def generate_master_readme(tools: List[Dict]):
     lines.append("")
 
     # Badges Row 1: Metrics (Using bulletproof static/v1 syntax that never 404s)
-    lines.append(f"[![Total Tools](https://img.shields.io/static/v1?label=Total%20Tools&message={total_tools}&color=blue&style=for-the-badge&logo=github)](./tools.json) ")
+    lines.append(f"[![Total Tools](https://img.shields.io/static/v1?label=Total%20Tools&message={total_tools}&color=blue&style=for-the-badge&logo=github)](./scripts/tools.json) ")
     lines.append(f"[![Total Stars Tracked](https://img.shields.io/static/v1?label=Total%20Stars&message={format_star_count(total_stars)}+&color=yellow&style=for-the-badge&logo=apachespark)]({REPO_URL}) ")
     lines.append(f"[![Auto Sync](https://img.shields.io/static/v1?label=Auto%20Sync&message=Daily%20Cron&color=brightgreen&style=for-the-badge&logo=githubactions)](./.github/workflows/update.yml) ")
     lines.append(f"[![Last Updated](https://img.shields.io/static/v1?label=Updated&message={last_sync}&color=orange&style=for-the-badge)]({REPO_URL}) ")
@@ -618,7 +619,7 @@ def generate_master_readme(tools: List[Dict]):
     lines.append("")
     lines.append("1. **Deep Discovery**: Rotates queries across GitHub API topics (`ai-ide`, `cli-agent`, `mcp-server`, `coding-agent`, `agent-skills`, `browser-agent`, etc.).")
     lines.append("2. **Quality Gate & Filter**: Evaluates metadata, stars, push activity, and description quality.")
-    lines.append("3. **Multi-Folder Generation**: Automatically updates both `tools.json`, root category directories, and this `README.md`.")
+    lines.append("3. **Multi-Folder Generation**: Automatically updates both `scripts/tools.json`, root category directories, and this `README.md`.")
     lines.append("4. **Auto-Commit**: Changes are cleanly pushed to GitHub daily.")
     lines.append("")
     lines.append("---")
@@ -642,8 +643,8 @@ def generate_master_readme(tools: List[Dict]):
     lines.append("Have you built or discovered an awesome AI Agent, MCP Server, or Tool?")
     lines.append("")
     lines.append("1. Fork this repository.")
-    lines.append("2. Add your tool entry directly to `tools.json` with the proper category.")
-    lines.append("3. Run `python sync.py --render-only` to regenerate all category directories and the master index.")
+    lines.append("2. Add your tool entry directly to `scripts/tools.json` with the proper category.")
+    lines.append("3. Run `python scripts/sync.py --render-only` to regenerate all category directories and the master index.")
     lines.append("4. Submit a Pull Request!")
     lines.append("")
     lines.append("---")
