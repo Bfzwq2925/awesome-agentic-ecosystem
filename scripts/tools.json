@@ -5420,5 +5420,29 @@
     ],
     "added_at": "2026-09-01",
     "last_updated": "2026-09-01"
+  },
+  {
+    "full_name": "nowork-studio/notfair-plugin",
+    "name": "notfair-plugin",
+    "url": "https://github.com/nowork-studio/notfair-plugin",
+    "description": "Open-source SEO, GEO, and marketing skills for AI agents.",
+    "category": "agent_skills",
+    "stars": 3445,
+    "forks": 426,
+    "language": "TypeScript",
+    "topics": [
+      "agents",
+      "claude-code-plugin",
+      "claude-skills",
+      "gemini-cli-extension",
+      "geo",
+      "googleads",
+      "googleadsmcp",
+      "mcp",
+      "metaads",
+      "seo"
+    ],
+    "added_at": "2026-09-01",
+    "last_updated": "2026-09-01"
   }
 ]

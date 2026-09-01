@@ -2,8 +2,8 @@
 
 > A curated, fully automated grand master index of high-impact **AI Agents**, **Model Context Protocol (MCP) Servers**, **AI IDEs & Editors**, **CLI Agent Tools**, **Agent Skills**, and **Multi-Agent Frameworks**. Only battle-tested, high-utility tools — zero junk. 🤖🔌💻
 
-[![Total Tools](https://img.shields.io/static/v1?label=Total%20Tools&message=277&color=blue&style=for-the-badge&logo=github)](./scripts/tools.json) 
-[![Total Stars Tracked](https://img.shields.io/static/v1?label=Total%20Stars&message=7214.8k+&color=yellow&style=for-the-badge&logo=apachespark)](https://github.com/tech-anupam/awesome-agentic-ecosystem) 
+[![Total Tools](https://img.shields.io/static/v1?label=Total%20Tools&message=278&color=blue&style=for-the-badge&logo=github)](./scripts/tools.json) 
+[![Total Stars Tracked](https://img.shields.io/static/v1?label=Total%20Stars&message=7218.3k+&color=yellow&style=for-the-badge&logo=apachespark)](https://github.com/tech-anupam/awesome-agentic-ecosystem) 
 [![Auto Sync](https://img.shields.io/static/v1?label=Auto%20Sync&message=Daily%20Cron&color=brightgreen&style=for-the-badge&logo=githubactions)](./.github/workflows/update.yml) 
 [![Last Updated](https://img.shields.io/static/v1?label=Updated&message=2026-09-01&color=orange&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem) 
 [![License: MIT](https://img.shields.io/static/v1?label=License&message=MIT&color=purple&style=for-the-badge)](./LICENSE)
@@ -22,7 +22,7 @@
 | 📟 **CLI & Terminal Agent Tools** | [`cli-terminal-agents/`](./cli-terminal-agents/) | `41 tools` | Interactive command-line agents, terminal pair programmers, and shell automation copilots (Claude Code, Gemini CLI, Aider, Goose, Mentat). |
 | 🤖 **Autonomous Software Engineering Agents** | [`autonomous-dev-agents/`](./autonomous-dev-agents/) | `13 tools` | Full-stack autonomous software engineers, issue solvers, and end-to-end project builders (OpenHands, SWE-agent, GPT-Pilot, MetaGPT, Devika). |
 | 🔌 **Model Context Protocol (MCP) Servers** | [`mcp-servers/`](./mcp-servers/) | `41 tools` | Standardized MCP servers, tool connectors, protocol implementations, and registries for Claude Desktop, Cursor, and custom agents. |
-| ⚡ **Agent Skills & Action Toolkits** | [`agent-skills/`](./agent-skills/) | `36 tools` | Function calling suites, tool integrations, external API bridges, and executable skillsets (Composio, Toolhouse, ToolJet). |
+| ⚡ **Agent Skills & Action Toolkits** | [`agent-skills/`](./agent-skills/) | `37 tools` | Function calling suites, tool integrations, external API bridges, and executable skillsets (Composio, Toolhouse, ToolJet). |
 | 🧩 **AI Plugins & IDE Extensions** | [`plugins-extensions/`](./plugins-extensions/) | `14 tools` | VS Code extensions, Cursor rules, JetBrains plugins, and environment enhancers for coding assistants (Continue, Roo-Cline, Cursorrules). |
 | 🌐 **Browser & Desktop Automation** | [`browser-automation/`](./browser-automation/) | `36 tools` | Vision-guided web agents, OS-level controllers, Playwright integrations, and GUI agents (Browser-Use, Stagehand, Open-Interpreter, UI-TARS). |
 | 🧠 **Multi-Agent Frameworks & Orchestration** | [`frameworks-orchestration/`](./frameworks-orchestration/) | `37 tools` | Graph-based workflows, conversational multi-agent systems, and stateful agent coordinators (LangGraph, CrewAI, AutoGen, Dify, Swarm). |
@@ -37,7 +37,7 @@
 - [📟 CLI & Terminal Agent Tools (41)](#-cli-terminal-agents)
 - [🤖 Autonomous Software Engineering Agents (13)](#-autonomous-dev-agents)
 - [🔌 Model Context Protocol (MCP) Servers (41)](#-mcp-servers)
-- [⚡ Agent Skills & Action Toolkits (36)](#-agent-skills)
+- [⚡ Agent Skills & Action Toolkits (37)](#-agent-skills)
 - [🧩 AI Plugins & IDE Extensions (14)](#-plugins-extensions)
 - [🌐 Browser & Desktop Automation (36)](#-browser-automation)
 - [🧠 Multi-Agent Frameworks & Orchestration (37)](#-frameworks-orchestration)
@@ -224,6 +224,7 @@
 | [**`llama_parse`**](https://github.com/run-llama/llama_parse) | GenAI-native document parsing tool skill for complex PDFs, tables, diagrams, and financial reports. | [![Stars](https://img.shields.io/github/stars/run-llama/llama_parse?style=flat&label=⭐)](https://github.com/run-llama/llama_parse) | `Python` | [Explore ↗](https://github.com/run-llama/llama_parse) |
 | [**`open-knowledge`**](https://github.com/inkeep/open-knowledge) | Beautiful, AI-native markdown IDE and LLM wiki | [![Stars](https://img.shields.io/github/stars/inkeep/open-knowledge?style=flat&label=⭐)](https://github.com/inkeep/open-knowledge) | `TypeScript` | [Explore ↗](https://github.com/inkeep/open-knowledge) |
 | [**`mirage`**](https://github.com/strukto-ai/mirage) | The World's First Virtual Terminal for AI Agents | [![Stars](https://img.shields.io/github/stars/strukto-ai/mirage?style=flat&label=⭐)](https://github.com/strukto-ai/mirage) | `TypeScript` | [Explore ↗](https://github.com/strukto-ai/mirage) |
+| [**`notfair-plugin`**](https://github.com/nowork-studio/notfair-plugin) | Open-source SEO, GEO, and marketing skills for AI agents. | [![Stars](https://img.shields.io/github/stars/nowork-studio/notfair-plugin?style=flat&label=⭐)](https://github.com/nowork-studio/notfair-plugin) | `TypeScript` | [Explore ↗](https://github.com/nowork-studio/notfair-plugin) |
 | [**`toolhouse`**](https://github.com/toolhouse-community/toolhouse) | Cloud-native tool execution runtime that enables LLMs to take actions, run code, scrape web pages, and access external APIs with 3 lines of code. | [![Stars](https://img.shields.io/github/stars/toolhouse-community/toolhouse?style=flat&label=⭐)](https://github.com/toolhouse-community/toolhouse) | `Python` | [Explore ↗](https://github.com/toolhouse-community/toolhouse) |
 | [**`ai`**](https://github.com/TanStack/ai) | 🤖 Type-safe, provider-agnostic TypeScript AI SDK for streaming chat, tool calling, agents, and multimodal apps across OpenAI, Anthropic, Gemini, React, Vue, Svelte, and Solid. | [![Stars](https://img.shields.io/github/stars/TanStack/ai?style=flat&label=⭐)](https://github.com/TanStack/ai) | `TypeScript` | [Explore ↗](https://github.com/TanStack/ai) |
 | [**`VCPToolBox`**](https://github.com/lioensky/VCPToolBox) | VCP 部署在 AI 模型 API 与前端应用之间，是面向AGI OS开发和探索的工业级基建示范项目。通过统一指令协议、多层级持久化记忆、分布式插件引擎及多 Agent 协作框架，将原本“无状态、无记忆、无工具调用能力”的大语言模型，彻底改造成拥有永久自我意识、物理世界操作权及群体协作智能的完整智能体系统。 | [![Stars](https://img.shields.io/github/stars/lioensky/VCPToolBox?style=flat&label=⭐)](https://github.com/lioensky/VCPToolBox) | `JavaScript` | [Explore ↗](https://github.com/lioensky/VCPToolBox) |
