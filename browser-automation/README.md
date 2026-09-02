@@ -4,9 +4,9 @@
 
 [← Back to Main Repository](../README.md) • [⭐ Star Repository](https://github.com/tech-anupam/awesome-agentic-ecosystem)
 
-[![Tools in Category](https://img.shields.io/static/v1?label=Tools&message=36&color=blue&style=for-the-badge)](./) 
-[![Category Stars](https://img.shields.io/static/v1?label=Category%20Stars&message=489.6k+&color=yellow&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem) 
-[![Updated](https://img.shields.io/static/v1?label=Updated&message=2026-09-01&color=orange&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem)
+[![Tools in Category](https://img.shields.io/static/v1?label=Tools&message=37&color=blue&style=for-the-badge)](./) 
+[![Category Stars](https://img.shields.io/static/v1?label=Category%20Stars&message=490.2k+&color=yellow&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem) 
+[![Updated](https://img.shields.io/static/v1?label=Updated&message=2026-09-02&color=orange&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem)
 
 ---
 
@@ -47,9 +47,10 @@
 | [**`h5i`**](https://github.com/h5i-dev/h5i) | Secure, auditable browser for AI agents. Pure Rust, no Chromium or V8. ~3× faster and ~86% less peak memory than headless Chromium. | [![Stars](https://img.shields.io/github/stars/h5i-dev/h5i?style=flat&label=⭐)](https://github.com/h5i-dev/h5i) | `Rust` | [Explore ↗](https://github.com/h5i-dev/h5i) |
 | [**`flyto-core`**](https://github.com/flytohub/flyto-core) | AI said it finished. Flyto2 shows the proof. | [![Stars](https://img.shields.io/github/stars/flytohub/flyto-core?style=flat&label=⭐)](https://github.com/flytohub/flyto-core) | `Python` | [Explore ↗](https://github.com/flytohub/flyto-core) |
 | [**`bux`**](https://github.com/browser-use/bux) | Browser Use Box: a 24/7 Claude Code agent for Playwright-style browser automation with Browser Use Cloud, Telegram, and a real browser on any box you own. | [![Stars](https://img.shields.io/github/stars/browser-use/bux?style=flat&label=⭐)](https://github.com/browser-use/bux) | `Python` | [Explore ↗](https://github.com/browser-use/bux) |
-| [**`PhysiClaw`**](https://github.com/physiclaw/PhysiClaw) | The AI agent that interacts with you in the real world. | [![Stars](https://img.shields.io/github/stars/physiclaw/PhysiClaw?style=flat&label=⭐)](https://github.com/physiclaw/PhysiClaw) | `Python` | [Explore ↗](https://github.com/physiclaw/PhysiClaw) |
-| [**`webqa-agent`**](https://github.com/MigoXLab/webqa-agent) | Autonomous web browser agent that audits performance, functionality & UX for engineers and vibe-coding creators. 网站自主评估测试 Agent，支持 GUI/CLI 一键完成性能、功能使用与交互体验的测试评估 | [![Stars](https://img.shields.io/github/stars/MigoXLab/webqa-agent?style=flat&label=⭐)](https://github.com/MigoXLab/webqa-agent) | `Python` | [Explore ↗](https://github.com/MigoXLab/webqa-agent) |
 | [**`PawWork_ZhuaZhua`**](https://github.com/Player-YN/PawWork_ZhuaZhua) | Paw Work - selection-first web agent for Chrome: select on the live page, describe the outcome, take away an editable office file. BYOK, sandboxed, no server. | [![Stars](https://img.shields.io/github/stars/Player-YN/PawWork_ZhuaZhua?style=flat&label=⭐)](https://github.com/Player-YN/PawWork_ZhuaZhua) | `JavaScript` | [Explore ↗](https://github.com/Player-YN/PawWork_ZhuaZhua) |
+| [**`PhysiClaw`**](https://github.com/physiclaw/PhysiClaw) | The AI agent that interacts with you in the real world. | [![Stars](https://img.shields.io/github/stars/physiclaw/PhysiClaw?style=flat&label=⭐)](https://github.com/physiclaw/PhysiClaw) | `Python` | [Explore ↗](https://github.com/physiclaw/PhysiClaw) |
+| [**`dorabot`**](https://github.com/suitedaces/dorabot) | macOS app for 24/7 AI agents in an IDE with memory, scheduled tasks, browser use + access to Whatsapp, Telegram, Slack. | [![Stars](https://img.shields.io/github/stars/suitedaces/dorabot?style=flat&label=⭐)](https://github.com/suitedaces/dorabot) | `TypeScript` | [Explore ↗](https://github.com/suitedaces/dorabot) |
+| [**`webqa-agent`**](https://github.com/MigoXLab/webqa-agent) | Autonomous web browser agent that audits performance, functionality & UX for engineers and vibe-coding creators. 网站自主评估测试 Agent，支持 GUI/CLI 一键完成性能、功能使用与交互体验的测试评估 | [![Stars](https://img.shields.io/github/stars/MigoXLab/webqa-agent?style=flat&label=⭐)](https://github.com/MigoXLab/webqa-agent) | `Python` | [Explore ↗](https://github.com/MigoXLab/webqa-agent) |
 
 ---
 

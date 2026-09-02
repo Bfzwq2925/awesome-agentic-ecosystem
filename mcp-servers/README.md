@@ -4,9 +4,9 @@
 
 [← Back to Main Repository](../README.md) • [⭐ Star Repository](https://github.com/tech-anupam/awesome-agentic-ecosystem)
 
-[![Tools in Category](https://img.shields.io/static/v1?label=Tools&message=41&color=blue&style=for-the-badge)](./) 
-[![Category Stars](https://img.shields.io/static/v1?label=Category%20Stars&message=1621.9k+&color=yellow&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem) 
-[![Updated](https://img.shields.io/static/v1?label=Updated&message=2026-09-01&color=orange&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem)
+[![Tools in Category](https://img.shields.io/static/v1?label=Tools&message=42&color=blue&style=for-the-badge)](./) 
+[![Category Stars](https://img.shields.io/static/v1?label=Category%20Stars&message=1657.2k+&color=yellow&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem) 
+[![Updated](https://img.shields.io/static/v1?label=Updated&message=2026-09-02&color=orange&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem)
 
 ---
 
@@ -30,6 +30,7 @@
 | [**`reactive-resume`**](https://github.com/amruthpillai/reactive-resume) | A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today! | [![Stars](https://img.shields.io/github/stars/amruthpillai/reactive-resume?style=flat&label=⭐)](https://github.com/amruthpillai/reactive-resume) | `TypeScript` | [Explore ↗](https://github.com/amruthpillai/reactive-resume) |
 | [**`cline`**](https://github.com/cline/cline) | Autonomous coding agent right in your IDE, capable of creating/editing files, executing commands, and using MCP servers. | [![Stars](https://img.shields.io/github/stars/cline/cline?style=flat&label=⭐)](https://github.com/cline/cline) | `TypeScript` | [Explore ↗](https://github.com/cline/cline) |
 | [**`codebase-memory-mcp`**](https://github.com/DeusData/codebase-memory-mcp) | High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies. | [![Stars](https://img.shields.io/github/stars/DeusData/codebase-memory-mcp?style=flat&label=⭐)](https://github.com/DeusData/codebase-memory-mcp) | `C` | [Explore ↗](https://github.com/DeusData/codebase-memory-mcp) |
+| [**`QwenPaw`**](https://github.com/agentscope-ai/QwenPaw) | Your Personal AI Assistant; easy to install, deploy on your own machine or on the cloud; supports multiple chat apps with easily extensible capabilities. | [![Stars](https://img.shields.io/github/stars/agentscope-ai/QwenPaw?style=flat&label=⭐)](https://github.com/agentscope-ai/QwenPaw) | `Python` | [Explore ↗](https://github.com/agentscope-ai/QwenPaw) |
 | [**`github-mcp-server`**](https://github.com/github/github-mcp-server) | GitHub's official MCP Server | [![Stars](https://img.shields.io/github/stars/github/github-mcp-server?style=flat&label=⭐)](https://github.com/github/github-mcp-server) | `Go` | [Explore ↗](https://github.com/github/github-mcp-server) |
 | [**`gpt-researcher`**](https://github.com/assafelovic/gpt-researcher) | An autonomous agent that conducts deep research on any data using any LLM providers | [![Stars](https://img.shields.io/github/stars/assafelovic/gpt-researcher?style=flat&label=⭐)](https://github.com/assafelovic/gpt-researcher) | `Python` | [Explore ↗](https://github.com/assafelovic/gpt-researcher) |
 | [**`serena`**](https://github.com/oraios/serena) | A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities  - the IDE for your agent | [![Stars](https://img.shields.io/github/stars/oraios/serena?style=flat&label=⭐)](https://github.com/oraios/serena) | `Python` | [Explore ↗](https://github.com/oraios/serena) |
