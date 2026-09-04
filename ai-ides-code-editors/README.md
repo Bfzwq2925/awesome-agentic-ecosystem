@@ -6,7 +6,7 @@
 
 [![Tools in Category](https://img.shields.io/static/v1?label=Tools&message=19&color=blue&style=for-the-badge)](./) 
 [![Category Stars](https://img.shields.io/static/v1?label=Category%20Stars&message=178.6k+&color=yellow&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem) 
-[![Updated](https://img.shields.io/static/v1?label=Updated&message=2026-09-03&color=orange&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem)
+[![Updated](https://img.shields.io/static/v1?label=Updated&message=2026-09-04&color=orange&style=for-the-badge)](https://github.com/tech-anupam/awesome-agentic-ecosystem)
 
 ---
 
@@ -30,9 +30,9 @@
 | [**`Visual-Code-Space`**](https://github.com/Visual-Code-Space/Visual-Code-Space) | A Modern Code Editor for Android | [![Stars](https://img.shields.io/github/stars/Visual-Code-Space/Visual-Code-Space?style=flat&label=⭐)](https://github.com/Visual-Code-Space/Visual-Code-Space) | `Kotlin` | [Explore ↗](https://github.com/Visual-Code-Space/Visual-Code-Space) |
 | [**`Velocity`**](https://github.com/ishandutta2007/Velocity) | 🚀🪐🌕🌑☄️🛸 Opensource equivalent of Google's Antigravity/Claude Code/Cursor | [![Stars](https://img.shields.io/github/stars/ishandutta2007/Velocity?style=flat&label=⭐)](https://github.com/ishandutta2007/Velocity) | `TypeScript` | [Explore ↗](https://github.com/ishandutta2007/Velocity) |
 | [**`mco`**](https://github.com/mco-org/mco) | CLI-first orchestration for AI coding agents: run selected agents and models in parallel, compare raw answers, and coordinate review or implementation workflows. | [![Stars](https://img.shields.io/github/stars/mco-org/mco?style=flat&label=⭐)](https://github.com/mco-org/mco) | `Python` | [Explore ↗](https://github.com/mco-org/mco) |
-| [**`code-editor-toolkit`**](https://github.com/Nexusauneedle/code-editor-toolkit) | Code Editor Toolkit | [![Stars](https://img.shields.io/github/stars/Nexusauneedle/code-editor-toolkit?style=flat&label=⭐)](https://github.com/Nexusauneedle/code-editor-toolkit) | `Multi` | [Explore ↗](https://github.com/Nexusauneedle/code-editor-toolkit) |
 | [**`awesome-cursor-download`**](https://github.com/worryzyy/awesome-cursor-download) | Cursor历史版本下载、Cursor下载链接追踪器，Cursor beta版本、 Cursor下载中心 | [![Stars](https://img.shields.io/github/stars/worryzyy/awesome-cursor-download?style=flat&label=⭐)](https://github.com/worryzyy/awesome-cursor-download) | `TypeScript` | [Explore ↗](https://github.com/worryzyy/awesome-cursor-download) |
 | [**`super-dev`**](https://github.com/shangyankeji/super-dev) | Engineering workflow layer for AI coding tools with specs, review, quality gates, and traceability.为 AI 编程工具提供工程化流程、质量门禁与可追溯能力。 | [![Stars](https://img.shields.io/github/stars/shangyankeji/super-dev?style=flat&label=⭐)](https://github.com/shangyankeji/super-dev) | `Python` | [Explore ↗](https://github.com/shangyankeji/super-dev) |
+| [**`code-editor-toolkit`**](https://github.com/Nexusauneedle/code-editor-toolkit) | Code Editor Toolkit | [![Stars](https://img.shields.io/github/stars/Nexusauneedle/code-editor-toolkit?style=flat&label=⭐)](https://github.com/Nexusauneedle/code-editor-toolkit) | `Multi` | [Explore ↗](https://github.com/Nexusauneedle/code-editor-toolkit) |
 
 ---
 
